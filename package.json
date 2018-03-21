@@ -6,5 +6,8 @@
   "license": "MIT",
   "engines": {
     "node" : ">=7.6"
+  },
+  "dependencies": {
+    "superagent": "^3.8.2"
   }
 }
