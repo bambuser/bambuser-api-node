@@ -14,7 +14,7 @@ const iris = new IrisPlatformAPI('your-key-goes-here');
 
 ### Fetching broadcast or image metadata
 
-Get the last 50 items:
+Get the last few items:
 
 ```javascript
 let broadcasts = await iris.broadcasts.findAll();
