@@ -27,7 +27,7 @@ List items with pagination:
 ```javascript
 let pager = await iris.broadcasts.findAll({}, {withPagination: true});
 let broadcasts = [], pageResults;
-while (pageResults = pager.next()) {
+while (pageResults = await pager.next()) {
   broadcasts = broadcasts.concat(pageResults);
 }
 
