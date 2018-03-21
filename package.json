@@ -1,0 +1,10 @@
+{
+  "name": "iris-platform-node",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Bambuser AB",
+  "license": "MIT",
+  "engines": {
+    "node" : ">=7.6"
+  }
+}
