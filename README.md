@@ -54,5 +54,6 @@ await iris.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
 
 ## More information
 
-[Iris Platform Docs](https://irisplatform.io/docs)
-[Bambuser AB](https://bambuser.com)
+* [Iris Platform Docs](https://irisplatform.io/docs)
+
+* [Bambuser AB](https://bambuser.com)
