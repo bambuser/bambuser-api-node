@@ -52,6 +52,13 @@ await iris.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
 // (same for iris.images)
 ```
 
+### Get a link to a broadcast player
+
+```javascript
+let broadcasts = await iris.broadcasts.findAll();
+let playerUrl = iris.broadcasts.getPlayerURL(broadcasts[0].id);
+```
+
 ## More information
 
 * [Iris Platform Docs](https://irisplatform.io/docs)
