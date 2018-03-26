@@ -98,6 +98,8 @@ await iris.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
 
 ### Get a link to a broadcast player
 
+To use this method you must configure the API client with your signing keys.
+
 ```javascript
 let broadcasts = await iris.broadcasts.get();
 let playerUrl = iris.broadcasts.getPlayerURL(broadcasts[0].id);
