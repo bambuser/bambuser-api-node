@@ -13,7 +13,7 @@ The Iris Platform Node library provides means for communicating with the Iris Pl
 
 ## Usage
 
-The library needs to be configured with an API key for your Iris Platform account which can be found on [Iris Dashboard](https://dashboard.irisplatform.io). Pass the key into the constructor:
+The library needs to be configured with an API key for your Iris Platform account which can be found on [Iris Dashboard](https://dashboard.irisplatform.io/developer). Pass the key into the constructor:
 
 ```javascript
 const IrisPlatformAPI = require('iris-platform-node');
