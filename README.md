@@ -122,7 +122,7 @@ const waitForNewBroadcast = async () => {
   } catch (err) {
     if (err instanceof IrisPlatformAPI.errors.ResourceNotFound) {
       // Still not ready, wait a short time before checking again
-      await new Promise(r => setTimeout(() => r(), 5000));
+      await new Promise(r => setTimeout(r, 5000));
       return await waitForNewBroadcast();
     }
     throw err;
