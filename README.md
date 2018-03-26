@@ -21,6 +21,25 @@ const IrisPlatformAPI = require('iris-platform-node');
 const iris = new IrisPlatformAPI('your-key-goes-here');
 ```
 
+Optionally, pass more options:
+
+```javascript
+const iris = new IrisPlatformAPI({
+  apiKey: 'your-key-goes-here',
+  daId: 'your-signing-key',
+  daSecret: 'your-signing-secret'
+});
+```
+
+| Key | Type | Description |
+| -------- | ------ | --- |
+| apiKey   | string | Your Iris Platform API key |
+| daId     | string | (optional) The id part of your signing key |
+| daSecret | string | (optional) The secret part of your signing key |
+
+You can find your API key and signing key on [https://dashboard.irisplatform.io/developer](https://dashboard.irisplatform.io/developer).
+
+
 ### Fetching broadcast or image metadata
 
 Get the last few items:
