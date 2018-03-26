@@ -112,7 +112,24 @@ let playerUrl = iris.broadcasts.getPlayerURL(broadcasts[0].id);
 ```javascript
 let start = 5;
 let end = 145;
-await iris.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
+let { newBroadcastId } = await iris.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
+
+// Wait for the new broadcast (clip) to become ready
+let broadcast;
+const waitForNewBroadcast = async () => {
+  try {
+    broadcast = await iris.broadcasts.getById(newBroadcastId);
+  } catch (err) {
+    if (err instanceof IrisPlatformAPI.errors.ResourceNotFound) {
+      // Still not ready, wait a short time before checking again
+      await new Promise(r => setTimeout(() => r(), 5000));
+      return await waitForNewBroadcast();
+    }
+    throw err;
+  }
+};
+await waitForNewBroadcast();
+console.log(broadcast);
 ```
 
 ## More information
