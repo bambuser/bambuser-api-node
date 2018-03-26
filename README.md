@@ -25,6 +25,8 @@ const iris = new IrisPlatformAPI('your-key-goes-here');
 
 Get the last few items:
 
+[API Reference](https://irisplatform.io/docs/api/get-broadcast-metadata/)
+
 ```javascript
 let broadcasts = await iris.broadcasts.get();
 
@@ -66,6 +68,8 @@ let broadcast = await iris.broadcasts.getById('0a9860dd-359a-67c4-51d9-d87402770
 ### Deleting broadcasts or images
 
 Get an image or broadcast by their id:
+
+[API Reference](https://irisplatform.io/docs/api/removing-media/)
 
 ```javascript
 await iris.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
