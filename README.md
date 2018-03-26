@@ -31,6 +31,18 @@ let broadcasts = await iris.broadcasts.get();
 let images = await iris.images.get();
 ```
 
+Get items with options:
+
+You can find all available options in the [REST API documentation](https://irisplatform.io/docs/api/get-broadcast-metadata/).
+
+```javascript
+let broadcasts = await iris.broadcasts.get({
+  byAuthors: 'John Doe'
+});
+
+// (same for iris.images)
+```
+
 List items with pagination:
 
 ```javascript
