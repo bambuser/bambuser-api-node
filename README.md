@@ -26,15 +26,15 @@ const iris = new IrisPlatformAPI('your-key-goes-here');
 Get the last few items:
 
 ```javascript
-let broadcasts = await iris.broadcasts.findAll();
+let broadcasts = await iris.broadcasts.get();
 
-let images = await iris.images.findAll();
+let images = await iris.images.get();
 ```
 
 List items with pagination:
 
 ```javascript
-let pager = await iris.broadcasts.findAll({}, {withPagination: true});
+let pager = await iris.broadcasts.get({}, {withPagination: true});
 let broadcasts = [], pageResults;
 while (pageResults = await pager.next()) {
   broadcasts = broadcasts.concat(pageResults);
@@ -46,7 +46,7 @@ while (pageResults = await pager.next()) {
 Get an image or broadcast by their id:
 
 ```javascript
-let broadcast = await iris.broadcasts.findById('0a9860dd-359a-67c4-51d9-d87402770319');
+let broadcast = await iris.broadcasts.getById('0a9860dd-359a-67c4-51d9-d87402770319');
 
 // (same for iris.images)
 ```
@@ -64,7 +64,7 @@ await iris.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
 ### Get a link to a broadcast player
 
 ```javascript
-let broadcasts = await iris.broadcasts.findAll();
+let broadcasts = await iris.broadcasts.get();
 let playerUrl = iris.broadcasts.getPlayerURL(broadcasts[0].id);
 ```
 
