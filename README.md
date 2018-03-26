@@ -80,6 +80,16 @@ let broadcasts = await iris.broadcasts.get();
 let playerUrl = iris.broadcasts.getPlayerURL(broadcasts[0].id);
 ```
 
+### Create a clip from a broadcast
+
+[API Reference](https://irisplatform.io/docs/api/create-clips/)
+
+```javascript
+let start = 5;
+let end = 145;
+await iris.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
+```
+
 ## More information
 
 * [Iris Platform Docs](https://irisplatform.io/docs)
