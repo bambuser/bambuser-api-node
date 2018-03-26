@@ -6,7 +6,7 @@
     </a>
   </p>
   <br /><br />
-  <h1>Iris Platform REST API client for Node</h1>
+  <h1>Iris Platform REST API client for Node.js</h1>
 </div>
 
 The Iris Platform Node library provides means for communicating with the Iris Platform REST API.
