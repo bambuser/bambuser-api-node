@@ -37,7 +37,7 @@ const iris = new IrisPlatformAPI({
 | daId     | string | (optional) The id part of your signing key |
 | daSecret | string | (optional) The secret part of your signing key |
 
-You can find your API key and signing key on [https://dashboard.irisplatform.io/developer](https://dashboard.irisplatform.io/developer).
+You can find your API key and signing key on [dashboard.irisplatform.io/developer](https://dashboard.irisplatform.io/developer).
 
 
 ### Fetching broadcast or image metadata
