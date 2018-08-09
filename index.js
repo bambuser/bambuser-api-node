@@ -1,1 +1,1 @@
-module.exports = require('./lib/IrisPlatform');
+module.exports = require('./lib/BambuserAPI');
