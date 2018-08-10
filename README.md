@@ -1,13 +1,11 @@
 <div>
   <br/><br />
-  <!--
   <p align="center">
-    <a href="https://irisplatform.io" target="_blank" align="center">
-        <img src="https://irisplatform.io/static/images/company/iris-by-bambuser-black-horisontal.png" width="280">
+    <a href="https://bambuser.com" target="_blank" align="center">
+        <img src="https://bambuser.com/wp-content/themes/bambuser/assets/images/logos/bambuser-logo-horizontal-black.png" width="280">
     </a>
   </p>
   <br /><br />
-  -->
   <h1>Bambuser REST API client for Node.js</h1>
 </div>
 
