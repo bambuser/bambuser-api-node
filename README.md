@@ -79,7 +79,7 @@ while (pageResults = await pager.next()) {
 Get an image or broadcast by their id:
 
 ```javascript
-const broadcast = await bambuser.broadcasts.getById('0a9860dd-359a-67c4-51d9-d87402770319');
+const broadcast = await bambuser.broadcasts.getById('<broadcastId>');
 
 // (same for bambuser.images)
 ```
@@ -91,7 +91,7 @@ Get an image or broadcast by their id:
 [API Reference](https://bambuser.com/docs/api/removing-media/)
 
 ```javascript
-await bambuser.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
+await bambuser.broadcasts.deleteById('<broadcastId>');
 
 // (same for bambuser.images)
 ```
@@ -112,7 +112,7 @@ const playerUrl = bambuser.broadcasts.getPlayerURL(broadcasts[0].id);
 ```javascript
 let start = 5;
 let end = 145;
-const { newBroadcastId } = await bambuser.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
+const { newBroadcastId } = await bambuser.broadcasts.createClip('<broadcastId>', start, end);
 
 // Wait for the new broadcast (clip) to become ready
 let broadcast;
