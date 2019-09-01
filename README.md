@@ -47,9 +47,9 @@ Get the last few items:
 [API Reference](https://bambuser.com/docs/api/get-broadcast-metadata/)
 
 ```javascript
-let broadcasts = await bambuser.broadcasts.get();
+const broadcasts = await bambuser.broadcasts.get();
 
-let images = await bambuser.images.get();
+const images = await bambuser.images.get();
 ```
 
 Get items with options:
@@ -57,7 +57,7 @@ Get items with options:
 You can find all available options in the [REST API documentation](https://bambuser.com/docs/api/get-broadcast-metadata/).
 
 ```javascript
-let broadcasts = await bambuser.broadcasts.get({
+const broadcasts = await bambuser.broadcasts.get({
   byAuthors: 'John Doe'
 });
 
@@ -67,7 +67,7 @@ let broadcasts = await bambuser.broadcasts.get({
 List items with pagination:
 
 ```javascript
-let pager = await bambuser.broadcasts.get({}, {withPagination: true});
+const pager = await bambuser.broadcasts.get({}, {withPagination: true});
 let broadcasts = [], pageResults;
 while (pageResults = await pager.next()) {
   broadcasts = broadcasts.concat(pageResults);
@@ -79,7 +79,7 @@ while (pageResults = await pager.next()) {
 Get an image or broadcast by their id:
 
 ```javascript
-let broadcast = await bambuser.broadcasts.getById('0a9860dd-359a-67c4-51d9-d87402770319');
+const broadcast = await bambuser.broadcasts.getById('0a9860dd-359a-67c4-51d9-d87402770319');
 
 // (same for bambuser.images)
 ```
@@ -101,8 +101,8 @@ await bambuser.broadcasts.deleteById('0a9860dd-359a-67c4-51d9-d87402770319');
 To use this method you must configure the API client with your signing keys.
 
 ```javascript
-let broadcasts = await bambuser.broadcasts.get();
-let playerUrl = bambuser.broadcasts.getPlayerURL(broadcasts[0].id);
+const broadcasts = await bambuser.broadcasts.get();
+const playerUrl = bambuser.broadcasts.getPlayerURL(broadcasts[0].id);
 ```
 
 ### Create a clip from a broadcast
@@ -112,7 +112,7 @@ let playerUrl = bambuser.broadcasts.getPlayerURL(broadcasts[0].id);
 ```javascript
 let start = 5;
 let end = 145;
-let { newBroadcastId } = await bambuser.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
+const { newBroadcastId } = await bambuser.broadcasts.createClip('0a9860dd-359a-67c4-51d9-d87402770319', start, end);
 
 // Wait for the new broadcast (clip) to become ready
 let broadcast;
