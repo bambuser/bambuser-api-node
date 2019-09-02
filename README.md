@@ -132,6 +132,41 @@ await waitForNewBroadcast();
 console.log(broadcast);
 ```
 
+### Tag a broadcast
+
+[API Reference](https://bambuser.com/docs/api/#tag-a-broadcast)
+
+```javascript
+await bambuser.broadcasts.addTag('<broadcastId>', '<tag>', '[options]');
+// {text: 'baz', id: 665928}
+```
+
+Tags can be created with an optional start and (also optional) end position, specified as no. seconds into the broadcasts.
+Do this by supplying `positionStart`/`positionEnd` in an `option` object as the third argument:
+
+```javascript
+await bambuser.broadcasts.addTag('<broadcastId>', '<tag>', {
+  positionStart: 60,
+  positionEnd: 120
+});
+```
+
+### Removing tags from a broadcast
+
+[API Reference](https://bambuser.com/docs/api/#remove-a-tag-from-a-broadcast)
+
+Remove a single tag by its id:
+
+```javascript
+await bambuser.broadcasts.removeTag('<broadcastId>', '<tagId>');
+```
+
+Remove all tags from a broadcast:
+
+```javascript
+await bambuser.broadcasts.removeAllTags('<broadcastId>');
+```
+
 ## More information
 
 * [Bambuser Docs](https://bambuser.com/docs)
