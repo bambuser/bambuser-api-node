@@ -105,6 +105,14 @@ const broadcasts = await bambuser.broadcasts.get();
 const playerUrl = bambuser.broadcasts.getPlayerURL(broadcasts[0].id);
 ```
 
+### Get a Download link to a broadcast
+
+To use this method you must configure the API client with your signing keys.
+
+```javascript
+const broadcastDownloadLink = await bambuser.broadcasts.getDownloadLink('<broadcastId>');
+```
+
 ### Create a clip from a broadcast
 
 [API Reference](https://bambuser.com/docs/api/create-clips/)
