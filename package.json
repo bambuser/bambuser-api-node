@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "query-string": "^6.0.0",
-    "superagent": "^3.8.2"
+    "superagent": "^5.1.2"
   }
 }
